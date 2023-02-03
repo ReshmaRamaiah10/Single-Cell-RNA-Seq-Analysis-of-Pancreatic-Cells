@@ -1,0 +1,20 @@
+#!/usr/bin/bash -l
+
+#Job details
+#$ -P bf528
+#$ -cwd
+#$ -j y
+#$ -pe mpi_16_tasks_per_node 16
+
+echo "Running job $JOB_ID"
+echo "Started: $(date +%F)"
+echo "Running in directory: $PWD"
+
+#load modules and dependencies
+module load salmon
+
+#use salmon
+salmon alevin -l ISR -1 /projectnb2/bf528/students/rkafrawi/project_3/Run_data/SRR3879606/SRR3879606_1.fastq.gz -2 /projectnb2/bf528/students/rkafrawi/project_3/Run_data/SRR3879606/SRR3879606_2.fastq.gz --end 5 --barcodeLength 19 --umiLength 6  -i /projectnb2/bf528/students/rkafrawi/project_3/Run_data/salmon_analysis/f_index [--whitelist /projectnb2/bf528/students/rkafrawi/project_3/Run_data/salmon_analysis/4/whitelist_SRR3879606_bc.tsv] -p 10 -o /projectnb2/bf528/students/rkafrawi/project_3/Run_data/salmon_analysis/6/salmon_final --tgMap /projectnb2/bf528/students/rkafrawi/project_3/Run_data/salmon_analysis/create_transcript_map/trans_map/gargi_gene_map_swap.tsv
+
+#end job message (detail)
+echo "Job finished: $(date +%F)"

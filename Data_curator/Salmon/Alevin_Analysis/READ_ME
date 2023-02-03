@@ -1,0 +1,2 @@
+This directory contains the bash scripts used to generate the UMI count matrices. 
+One of each script can be found in the subdirectories named after the samples used for each job.

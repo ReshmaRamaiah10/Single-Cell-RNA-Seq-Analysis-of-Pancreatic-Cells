@@ -1,0 +1,4 @@
+This directory contains the bash script I wrote to generate the index for the -i parameter in the salmon alevin commandline. 
+Initial attempts to index the .fa file used to generate the txp2gene file omitted the --gencode argument, which led to issues in my downstream analysis. 
+In this revised bash script, I included this formerly missing argument, allowing me to properly map the reads to the transcriptome.
+

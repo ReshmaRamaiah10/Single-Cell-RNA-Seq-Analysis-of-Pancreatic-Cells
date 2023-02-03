@@ -1,0 +1,4 @@
+This directory contains all the code used to set up the salmon alevin command. Three components of note that had to be prepped for the command to be functional:
+  1. The barcoding scheme, which was provided in the project description (--end 5 --barcodeLength 19 --umiLength 6).
+  2. An index generated from the human transcriptome.
+  3. A txp2gene mapping file generated from the human transcriptome.

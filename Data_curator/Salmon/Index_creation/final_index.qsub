@@ -1,0 +1,22 @@
+#!/usr/bin/bash -l
+
+#Job details
+#$ -P bf528
+#$ -cwd
+#$ -j y
+#$ -pe mpi_16_tasks_per_node 16
+
+echo "Running job $JOB_ID"
+echo "Started: $(date +%F)"
+echo "Running in directory: $PWD"
+
+#load modules
+module load salmon
+
+#create indexes
+salmon index -i f_index -k 31 --gencode -p 4 -t /projectnb2/bf528/students/rkafrawi/project_3/Run_data/salmon_analysis/create_transcript_map/NEW_gencode.v40.transcripts.fa 
+
+#end job message (detail)
+echo "Job finished: $(date +%F)"
+
+

@@ -1,0 +1,2 @@
+This directory is split into three directories, two of which represents one of the two primary components of data preparation for project 4: 
+barcode whitelisting and salmon. The last directory contains the primary deliverables for each run (mapping summary and UMI count matrix).
